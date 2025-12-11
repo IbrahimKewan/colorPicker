@@ -1,0 +1,248 @@
+<!-- ColorPicker Button - Einfache Integration -->
+<!-- Diesen Code können Sie in Ihre bestehende Form einfügen -->
+
+<!-- Farbauswahl-Feld mit Button -->
+<items>
+	<xtype>igfieldcontainer</xtype>
+	<layout>hbox</layout>
+	<fieldLabel>Zeichenfarbe</fieldLabel>
+	<width>100%</width>
+
+	<!-- Textfeld für Farbwert -->
+	<items>
+		<xtype>igtextfield</xtype>
+		<elementId>drawingColorField</elementId>
+		<mapping>settings.drawingColor</mapping>
+		<value>#FF0000</value>
+		<flex>1</flex>
+		<readOnly>true</readOnly>
+		<fieldStyle>background-color: #FF0000; color: #FFFFFF; font-weight: bold; text-align: center;</fieldStyle>
+	</items>
+
+	<!-- Button zum Öffnen des ColorPickers -->
+	<items>
+		<xtype>igbutton</xtype>
+		<text>...</text>
+		<width>40</width>
+		<margin>0 0 0 5</margin>
+		<tooltip>Farbe auswählen</tooltip>
+		<eventList>
+			<event>
+				<eventName>click</eventName>
+				<XML>
+					<commandList>
+						<!-- Öffnet ColorPicker Window/Dialog -->
+						<command type="openWindow" elementId="colorPickerWindow"/>
+						<!-- Optional: Aktuelle Farbe setzen -->
+						<command type="setValue" elementId="selectedColorField">[getValue(drawingColorField)]</command>
+					</commandList>
+				</XML>
+			</event>
+		</eventList>
+	</items>
+</items>
+
+
+<!-- ============================================ -->
+<!-- Alternative: Mit Grundfarben-Palette direkt -->
+<!-- ============================================ -->
+
+<items>
+	<xtype>igfieldcontainer</xtype>
+	<layout>vbox</layout>
+	<width>100%</width>
+
+	<!-- Farbfeld mit Button -->
+	<items>
+		<xtype>igfieldcontainer</xtype>
+		<layout>hbox</layout>
+		<fieldLabel>Zeichenfarbe</fieldLabel>
+
+		<items>
+			<xtype>igtextfield</xtype>
+			<elementId>colorValueField</elementId>
+			<mapping>color.value</mapping>
+			<value>#FF0000</value>
+			<width>100</width>
+			<readOnly>true</readOnly>
+			<fieldStyle>background-color: #FF0000; color: #FFFFFF; font-weight: bold;</fieldStyle>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<text>Farbe wählen</text>
+			<width>120</width>
+			<margin>0 0 0 10</margin>
+			<handler>toggleColorPalette</handler>
+		</items>
+	</items>
+
+	<!-- Grundfarben Palette (ein/ausblendbar) -->
+	<items>
+		<xtype>igcontainer</xtype>
+		<elementId>colorPaletteContainer</elementId>
+		<hidden>true</hidden>
+		<layout>table</layout>
+		<layoutConfig>
+			<columns>8</columns>
+		</layoutConfig>
+		<margin>5 0 0 0</margin>
+		<padding>5</padding>
+		<style>border: 1px solid #999; background-color: #f5f5f5;</style>
+
+		<!-- Farb-Buttons -->
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #FF0000;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#FF0000</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #FF0000;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #00FF00;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#00FF00</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #00FF00;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #0000FF;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#0000FF</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #0000FF;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #FFFF00;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#FFFF00</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #FFFF00;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #00FFFF;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#00FFFF</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #00FFFF;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #FF00FF;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#FF00FF</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #FF00FF;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #FFFFFF; border: 1px solid #999;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#FFFFFF</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #FFFFFF; color: #000000;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+		<items>
+			<xtype>igbutton</xtype>
+			<width>25</width>
+			<height>25</height>
+			<style>background-color: #000000;</style>
+			<eventList>
+				<event>
+					<eventName>click</eventName>
+					<XML>
+						<commandList>
+							<command type="setValue" elementId="colorValueField">#000000</command>
+							<command type="setFieldStyle" elementId="colorValueField">background-color: #000000;</command>
+							<command type="hide" elementId="colorPaletteContainer"/>
+						</commandList>
+					</XML>
+				</event>
+			</eventList>
+		</items>
+
+	</items>
+
+</items>
