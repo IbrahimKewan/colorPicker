@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtJS>
+    <Window
+        title="Farbe"
+        width="480"
+        height="360"
+        modal="true"
+        resizable="false"
+        closable="true"
+        layout="border">
+
+        <!-- Left Panel: Color Selection -->
+        <Container region="west" width="250" padding="10" layout="vbox">
+
+            <!-- Basic Colors Section -->
+            <Container>
+                <Label text="Grundfarben" margin="0 0 5 0"/>
+                <Container
+                    cls="color-palette-basic"
+                    layout="table"
+                    defaults="{width: 20, height: 20}">
+                    <!-- Row 1 -->
+                    <Button cls="color-btn" style="background-color: #FFB6C1;"/>
+                    <Button cls="color-btn" style="background-color: #FFFFE0;"/>
+                    <Button cls="color-btn" style="background-color: #90EE90;"/>
+                    <Button cls="color-btn" style="background-color: #00FF00;"/>
+                    <Button cls="color-btn" style="background-color: #7FFFD4;"/>
+                    <Button cls="color-btn" style="background-color: #1E90FF;"/>
+                    <Button cls="color-btn" style="background-color: #DDA0DD;"/>
+                    <Button cls="color-btn" style="background-color: #FFB6C1;"/>
+
+                    <!-- Row 2 -->
+                    <Button cls="color-btn" style="background-color: #FF0000;"/>
+                    <Button cls="color-btn" style="background-color: #FFFF00;"/>
+                    <Button cls="color-btn" style="background-color: #00FF00;"/>
+                    <Button cls="color-btn" style="background-color: #00FFFF;"/>
+                    <Button cls="color-btn" style="background-color: #0000FF;"/>
+                    <Button cls="color-btn" style="background-color: #FF00FF;"/>
+                    <Button cls="color-btn" style="background-color: #C0C0C0;"/>
+                    <Button cls="color-btn" style="background-color: #FF00FF;"/>
+
+                    <!-- Row 3 -->
+                    <Button cls="color-btn" style="background-color: #8B0000;"/>
+                    <Button cls="color-btn" style="background-color: #FFD700;"/>
+                    <Button cls="color-btn" style="background-color: #008000;"/>
+                    <Button cls="color-btn" style="background-color: #008080;"/>
+                    <Button cls="color-btn" style="background-color: #000080;"/>
+                    <Button cls="color-btn" style="background-color: #8B008B;"/>
+                    <Button cls="color-btn" style="background-color: #808080;"/>
+                    <Button cls="color-btn" style="background-color: #8B008B;"/>
+
+                    <!-- Row 4 -->
+                    <Button cls="color-btn" style="background-color: #800000;"/>
+                    <Button cls="color-btn" style="background-color: #FF8C00;"/>
+                    <Button cls="color-btn" style="background-color: #006400;"/>
+                    <Button cls="color-btn" style="background-color: #008B8B;"/>
+                    <Button cls="color-btn" style="background-color: #00008B;"/>
+                    <Button cls="color-btn" style="background-color: #4B0082;"/>
+                    <Button cls="color-btn" style="background-color: #696969;"/>
+                    <Button cls="color-btn" style="background-color: #4B0082;"/>
+
+                    <!-- Row 5 -->
+                    <Button cls="color-btn" style="background-color: #8B4513;"/>
+                    <Button cls="color-btn" style="background-color: #DAA520;"/>
+                    <Button cls="color-btn" style="background-color: #556B2F;"/>
+                    <Button cls="color-btn" style="background-color: #2F4F4F;"/>
+                    <Button cls="color-btn" style="background-color: #191970;"/>
+                    <Button cls="color-btn" style="background-color: #483D8B;"/>
+                    <Button cls="color-btn" style="background-color: #2F4F4F;"/>
+                    <Button cls="color-btn" style="background-color: #483D8B;"/>
+
+                    <!-- Row 6 -->
+                    <Button cls="color-btn" style="background-color: #000000;"/>
+                    <Button cls="color-btn" style="background-color: #808000;"/>
+                    <Button cls="color-btn" style="background-color: #556B2F;"/>
+                    <Button cls="color-btn" style="background-color: #A9A9A9;"/>
+                    <Button cls="color-btn" style="background-color: #708090;"/>
+                    <Button cls="color-btn" style="background-color: #D3D3D3;"/>
+                    <Button cls="color-btn" style="background-color: #4B0082;"/>
+                    <Button cls="color-btn" style="background-color: #FFFFFF;"/>
+                </Container>
+            </Container>
+
+            <!-- Custom Colors Section -->
+            <Container margin="10 0 0 0">
+                <Label text="Benutzerdefinierte Farben" margin="0 0 5 0"/>
+                <Container
+                    cls="color-palette-custom"
+                    layout="table"
+                    defaults="{width: 20, height: 20}">
+                    <!-- 2 rows x 8 columns = 16 custom color slots -->
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                    <Button cls="color-btn-custom" style="background-color: #FFFFFF; border: 1px solid #ccc;"/>
+                </Container>
+            </Container>
+
+            <!-- Define Colors Button -->
+            <Button text="Farben definieren &gt;&gt;" margin="10 0 0 0" handler="onDefineColors"/>
+
+        </Container>
+
+        <!-- Right Panel: Color Gradient and Values -->
+        <Container region="center" padding="10" layout="hbox">
+
+            <!-- Color Gradient Area -->
+            <Container
+                cls="color-gradient"
+                width="200"
+                height="200"
+                style="background: linear-gradient(to right, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF, #FF0000); position: relative;">
+                <!-- Brightness overlay -->
+                <Container
+                    cls="brightness-overlay"
+                    style="background: linear-gradient(to bottom, transparent, #000000); position: absolute; width: 100%; height: 100%;"/>
+                <!-- Saturation overlay -->
+                <Container
+                    cls="saturation-overlay"
+                    style="background: linear-gradient(to bottom, #FFFFFF, transparent); position: absolute; width: 100%; height: 100%;"/>
+            </Container>
+
+            <!-- Brightness Slider -->
+            <Container width="30" height="200" margin="0 0 0 10">
+                <Slider
+                    cls="brightness-slider"
+                    vertical="true"
+                    minValue="0"
+                    maxValue="255"
+                    value="255"
+                    height="200"
+                    listeners="{change: 'onBrightnessChange'}"/>
+            </Container>
+
+        </Container>
+
+        <!-- Bottom Panel: Input Fields and Buttons -->
+        <Container region="south" padding="10" layout="vbox">
+
+            <!-- Color Values -->
+            <Container layout="hbox" defaults="{labelWidth: 40}">
+                <Container layout="form" flex="1">
+                    <NumberField fieldLabel="Farb" name="hue" minValue="0" maxValue="360" value="0"/>
+                    <NumberField fieldLabel="Sät" name="saturation" minValue="0" maxValue="240" value="240"/>
+                    <NumberField fieldLabel="Hell" name="lightness" minValue="0" maxValue="120" value="120"/>
+                </Container>
+
+                <Container layout="form" flex="1" margin="0 0 0 10">
+                    <NumberField fieldLabel="Rot" name="red" minValue="0" maxValue="255" value="255"/>
+                    <NumberField fieldLabel="Grün" name="green" minValue="0" maxValue="255" value="0"/>
+                    <NumberField fieldLabel="Blau" name="blue" minValue="0" maxValue="255" value="0"/>
+                </Container>
+            </Container>
+
+            <!-- Buttons -->
+            <Container layout="hbox" margin="10 0 0 0">
+                <Button text="Farben hinzufügen" flex="1" handler="onAddColor"/>
+                <Container flex="1"/>
+                <Button text="OK" width="80" handler="onOK"/>
+                <Button text="Abbrechen" width="80" margin="0 0 0 5" handler="onCancel"/>
+            </Container>
+
+        </Container>
+
+    </Window>
+</ExtJS>
